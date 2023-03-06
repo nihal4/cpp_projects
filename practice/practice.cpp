@@ -189,7 +189,7 @@ int main(){
     }
 }
 
-*/
+
 //0-1 pattern
 
 int main(){
@@ -197,13 +197,130 @@ int main(){
     cin>>n;
     for(int x=1;x<=n;x++){
         for(int y=1;y<=x;y++){
-            if(x==y){
-                cout<<1;
+            if((x+y)%2==0){
+                cout<<1<<" ";
             }else{
-                cout<<0;
+                cout<<0<<" ";
             }
         }
         cout<<endl;
     }
     
 }
+
+//rombosh
+    * * * * *
+   * * * * *
+  * * * * *
+ * * * * *
+* * * * *
+int main(){
+    int n;
+    cin >> n;
+    for(int i = 1;i<=n;i++){
+        for(int x=1;x<=n-i;x++){
+            cout << " ";
+        }
+        for(int y=1;y<=n;y++){
+            cout << "*" <<" ";
+        }
+
+        cout << endl;
+    }
+    
+}
+
+
+//number patterns
+    1
+   1 2
+  1 2 3
+ 1 2 3 4
+1 2 3 4 5
+int main(){
+    int n;
+    cin >> n;
+    for(int i=1;i<=n;i++){
+        for(int x=1;x<=n-i;x++){
+            cout<<" ";
+        }
+        for(int y = 1;y<=i;y++){
+            cout << y << " ";
+        }
+
+        cout<<endl;
+    }
+}
+
+
+//palindromix pattern
+        1
+      2 1 2
+    3 2 1 2 3
+  4 3 2 1 2 3 4
+5 4 3 2 1 2 3 4 5
+int main(){
+    int  n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        int x;
+        for(x=1;x<=n-i;x++){
+            cout<<"  ";
+        }
+        int k=i;
+        for(;x<=n;x++){
+            cout<<k--<<" ";
+        }
+        k=2;
+        for(;x<=n+i-1;x++){
+            cout<<k++<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+//start pattern
+      *
+    * * *
+  * * * * *
+* * * * * * *
+* * * * * * *
+  * * * * *
+    * * *
+      *
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        int x;
+        for(x=1;x<=n-i;x++){
+            cout<<"  ";
+        }
+        //int k =i;
+        for(;x<=n;x++){
+            //k--;
+            cout<<"*"<<" ";
+        }
+        //k=2;
+        for(;x<=n+i-1;x++){
+            cout<<"*"<<" ";
+        }
+        cout<<endl;
+    }
+    for(int k=n;k>=1;k--){
+        int x;
+        for(x=n-k;x>=1;x--){
+            cout<<"  ";
+        }
+        for(;x<=k-1;x++){
+            cout<<"*"<<" ";
+        }
+        int y= k-1;
+        for(;y>=1;y--){
+            cout<<"*"<<" ";
+        }        
+        cout<<endl;
+        
+    }
+}
+*/
