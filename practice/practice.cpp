@@ -323,4 +323,48 @@ int main(){
         
     }
 }
+
+
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        for(int x=1;x<=n-i;x++){
+            cout<<"  ";
+        }
+        for(int x=1;x<=2*i-1;x++){
+            cout<<"*"<<" ";
+        }
+        cout<<endl;
+    }
+    for(int i=n;i>=1;i--){
+        for(int x=1;x<=n-i;x++){
+            cout<<"  ";
+        }
+        for(int x=1;x<=2*i-1;x++){
+            cout<<"*"<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+//z pattern
+****
+  *
+ *
+****
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        for(int x=1;x<=n;x++){
+            if(i==1||i==n||(i+x)==(n+1)){
+                cout<<"*"<<" ";
+            }else{
+                cout<<"  ";
+            }
+        }   
+        cout<<endl;
+    }
+}
 */
